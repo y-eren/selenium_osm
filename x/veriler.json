@@ -1,0 +1,373 @@
+[
+    {
+        "Ülke": "Fransa",
+        "Şehir": "Paris",
+        "Konum": "Eyfel Kulesi",
+        "Enlem": 48.8582599,
+        "Boylam": 2.2945006358633115
+    },
+    {
+        "Ülke": "Fransa",
+        "Şehir": "Paris",
+        "Konum": "Louvre Müzesi",
+        "Enlem": 48.8611473,
+        "Boylam": 2.33802768704666
+    },
+    {
+        "Ülke": "Fransa",
+        "Şehir": "Paris",
+        "Konum": "Notre Dame Katedrali",
+        "Enlem": 48.85293705,
+        "Boylam": 2.3500501225000026
+    },
+    {
+        "Ülke": "Fransa",
+        "Şehir": "Paris",
+        "Konum": "Montmartre",
+        "Enlem": 48.88546185,
+        "Boylam": 2.3391535013803098
+    },
+    {
+        "Ülke": "Fransa",
+        "Şehir": "Paris",
+        "Konum": "Sacré-cœur Bazilikası",
+        "Enlem": 48.88680575,
+        "Boylam": 2.3430153448835087
+    },
+    {
+        "Ülke": "Fransa",
+        "Şehir": "Paris",
+        "Konum": "Champs Élysées",
+        "Enlem": 48.8707573,
+        "Boylam": 2.3053312
+    },
+    {
+        "Ülke": "Fransa",
+        "Şehir": "Paris",
+        "Konum": "Moulin Rouge",
+        "Enlem": 48.8841094,
+        "Boylam": 2.3323564
+    },
+    {
+        "Ülke": "Fransa",
+        "Şehir": "Paris",
+        "Konum": "Pantheon",
+        "Enlem": 48.84619085,
+        "Boylam": 2.346078521905153
+    },
+    {
+        "Ülke": "Fransa",
+        "Şehir": "Paris",
+        "Konum": "Sainte-Chapelle",
+        "Enlem": 48.8553933,
+        "Boylam": 2.34499406295433
+    },
+    {
+        "Ülke": "Fransa",
+        "Şehir": "Paris",
+        "Konum": "Centre Pompidou",
+        "Enlem": 48.860591799999995,
+        "Boylam": 2.3524736024856843
+    },
+    {
+        "Ülke": "Fransa",
+        "Şehir": "Paris",
+        "Konum": "Saint Louis of Les Invalids Cathedral",
+        "Enlem": 48.85553555,
+        "Boylam": 2.3125959935907305
+    },
+    {
+        "Ülke": "Birleşik Krallık",
+        "Şehir": "Londra",
+        "Konum": "Buckingham Sarayı",
+        "Enlem": 51.5008349,
+        "Boylam": -0.1430045264505431
+    },
+    {
+        "Ülke": "Birleşik Krallık",
+        "Şehir": "Londra",
+        "Konum": "British Museum",
+        "Enlem": 51.51929365,
+        "Boylam": -0.12801772178494725
+    },
+    {
+        "Ülke": "Birleşik Krallık",
+        "Şehir": "Londra",
+        "Konum": "Tower of London",
+        "Enlem": 51.5077017,
+        "Boylam": -0.0760742
+    },
+    {
+        "Ülke": "Birleşik Krallık",
+        "Şehir": "Londra",
+        "Konum": "Tate Modern",
+        "Enlem": 51.5074293,
+        "Boylam": -0.09934164882888792
+    },
+    {
+        "Ülke": "Birleşik Krallık",
+        "Şehir": "Londra",
+        "Konum": "London Eye",
+        "Enlem": 51.5033416,
+        "Boylam": -0.11967649999999999
+    },
+    {
+        "Ülke": "Birleşik Krallık",
+        "Şehir": "Londra",
+        "Konum": "Hyde Park",
+        "Enlem": 51.5074889,
+        "Boylam": -0.1622074056037135
+    },
+    {
+        "Ülke": "Birleşik Krallık",
+        "Şehir": "Londra",
+        "Konum": "National Gallery",
+        "Enlem": 51.508881,
+        "Boylam": -0.12838264338231645
+    },
+    {
+        "Ülke": "Birleşik Krallık",
+        "Şehir": "Londra",
+        "Konum": "Covent Garden",
+        "Enlem": 51.5117363,
+        "Boylam": -0.1226769
+    },
+    {
+        "Ülke": "Birleşik Krallık",
+        "Şehir": "Londra",
+        "Konum": "Camden Market",
+        "Enlem": 51.5423781,
+        "Boylam": -0.1471949
+    },
+    {
+        "Ülke": "Birleşik Krallık",
+        "Şehir": "Londra",
+        "Konum": "Royal Borough of Greenwich",
+        "Enlem": 51.46862565,
+        "Boylam": 0.04883057313755089
+    },
+    {
+        "Ülke": "Birleşik Krallık",
+        "Şehir": "Londra",
+        "Konum": "The Shard",
+        "Enlem": 51.5043421,
+        "Boylam": -0.0864458928542395
+    },
+    {
+        "Ülke": "İtalya",
+        "Şehir": "Roma",
+        "Konum": "Kolezyum",
+        "Enlem": 41.8902614,
+        "Boylam": 12.493087103595503
+    },
+    {
+        "Ülke": "İtalya",
+        "Şehir": "Roma",
+        "Konum": "Pantheon",
+        "Enlem": 41.89861595,
+        "Boylam": 12.476833414483862
+    },
+    {
+        "Ülke": "İtalya",
+        "Şehir": "Roma",
+        "Konum": "Piazza Navona",
+        "Enlem": 41.900009,
+        "Boylam": 12.4731187
+    },
+    {
+        "Ülke": "İtalya",
+        "Şehir": "Roma",
+        "Konum": "Sant'Angelo Kalesi",
+        "Enlem": 41.903117800000004,
+        "Boylam": 12.466342676345292
+    },
+    {
+        "Ülke": "İtalya",
+        "Şehir": "Roma",
+        "Konum": "Trastevere",
+        "Enlem": 41.8911586,
+        "Boylam": 12.466845904466918
+    },
+    {
+        "Ülke": "İtalya",
+        "Şehir": "Roma",
+        "Konum": "Piazza Venezia",
+        "Enlem": 41.8961514,
+        "Boylam": 12.482407389638281
+    },
+    {
+        "Ülke": "İspanya",
+        "Şehir": "Barselona",
+        "Konum": "Sagrada Família",
+        "Enlem": 41.4035046,
+        "Boylam": 2.174428284189003
+    },
+    {
+        "Ülke": "İspanya",
+        "Şehir": "Barselona",
+        "Konum": "Park Guell",
+        "Enlem": 41.41423475,
+        "Boylam": 2.1524575933189065
+    },
+    {
+        "Ülke": "İspanya",
+        "Şehir": "Barselona",
+        "Konum": "La Rambla",
+        "Enlem": 41.3773548,
+        "Boylam": 2.1763456
+    },
+    {
+        "Ülke": "İspanya",
+        "Şehir": "Barselona",
+        "Konum": "Gothic Quarter",
+        "Enlem": 41.3833947,
+        "Boylam": 2.1769119
+    },
+    {
+        "Ülke": "İspanya",
+        "Şehir": "Barselona",
+        "Konum": "Camp Nou",
+        "Enlem": 41.3808046,
+        "Boylam": 2.1158872
+    },
+    {
+        "Ülke": "İspanya",
+        "Şehir": "Barselona",
+        "Konum": "Port Vell",
+        "Enlem": 41.37009315,
+        "Boylam": 2.185468125229046
+    },
+    {
+        "Ülke": "İspanya",
+        "Şehir": "Barselona",
+        "Konum": "la Ribera",
+        "Enlem": 41.3848426,
+        "Boylam": 2.1828745
+    },
+    {
+        "Ülke": "Hollanda",
+        "Şehir": "Amsterdam",
+        "Konum": "Rijksmuseum",
+        "Enlem": 52.35984855,
+        "Boylam": 4.8850393523181435
+    },
+    {
+        "Ülke": "Hollanda",
+        "Şehir": "Amsterdam",
+        "Konum": "Vondelpark",
+        "Enlem": 52.35719735,
+        "Boylam": 4.864119037446743
+    },
+    {
+        "Ülke": "Hollanda",
+        "Şehir": "Amsterdam",
+        "Konum": "Dam Meydanı",
+        "Enlem": 52.37311615,
+        "Boylam": 4.892351098497149
+    },
+    {
+        "Ülke": "Hollanda",
+        "Şehir": "Amsterdam",
+        "Konum": "Rembrandtplein",
+        "Enlem": 52.3663477,
+        "Boylam": 4.8966980511789195
+    },
+    {
+        "Ülke": "Hollanda",
+        "Şehir": "Amsterdam",
+        "Konum": "Beurs van Berlage",
+        "Enlem": 52.3750218,
+        "Boylam": 4.89626468097017
+    },
+    {
+        "Ülke": "Hollanda",
+        "Şehir": "Amsterdam",
+        "Konum": "Hortus Botanicus",
+        "Enlem": 52.366806,
+        "Boylam": 4.907780471794045
+    },
+    {
+        "Ülke": "Amerika Birleşik Devletleri",
+        "Şehir": "New York",
+        "Konum": "Times Square",
+        "Enlem": 40.75701215,
+        "Boylam": -73.98597092538824
+      },
+      {
+        "Ülke": "Amerika Birleşik Devletleri",
+        "Şehir": "New York",
+        "Konum": "Central Park",
+        "Enlem": 40.7827725,
+        "Boylam": -73.9653627406542
+      },
+      {
+        "Ülke": "Amerika Birleşik Devletleri",
+        "Şehir": "New York",
+        "Konum": "Empire State Building",
+        "Enlem": 40.74844205,
+        "Boylam": -73.98565890160751
+      },
+      {
+        "Ülke": "Amerika Birleşik Devletleri",
+        "Şehir": "New York",
+        "Konum": "Statue of Liberty",
+        "Enlem": 40.689253199999996,
+        "Boylam": -74.04454817144321
+      },
+      {
+        "Ülke": "Amerika Birleşik Devletleri",
+        "Şehir": "New York",
+        "Konum": "Rockefeller Center",
+        "Enlem": 40.75925755,
+        "Boylam": -73.97995686116377
+      },
+      {
+        "Ülke": "Amerika Birleşik Devletleri",
+        "Şehir": "New York",
+        "Konum": "One World Trade Center",
+        "Enlem": 40.71299915,
+        "Boylam": -74.01318943816048
+      },
+      {
+        "Ülke": "Japonya",
+        "Şehir": "Tokyo",
+        "Konum": "Tokyo Disneyland Hotel",
+        "Enlem": 35.6372098,
+        "Boylam": 139.8780543
+      },
+      {
+        "Ülke": "Japonya",
+        "Şehir": "Tokyo",
+        "Konum": "Ueno Park",
+        "Enlem": 35.7097196,
+        "Boylam": 139.7716388
+      },
+      {
+        "Ülke": "Japonya",
+        "Şehir": "Tokyo",
+        "Konum": "Tokyo Skytree",
+        "Enlem": 35.71005425,
+        "Boylam": 139.81071409992649
+      },
+      {
+        "Ülke": "Japonya",
+        "Şehir": "Tokyo",
+        "Konum": "Odaiba",
+        "Enlem": 35.6275347,
+        "Boylam": 139.7714719
+      },
+      {
+        "Ülke": "Japonya",
+        "Şehir": "Tokyo",
+        "Konum": "Tokyo Metropolitan Government Main Building 1",
+        "Enlem": 35.68949565,
+        "Boylam": 139.69170936268827
+      },
+      {
+        "Ülke": "Japonya",
+        "Şehir": "Tokyo",
+        "Konum": "Akihabara",
+        "Enlem": 35.7018928,
+        "Boylam": 139.7743684
+      }
+]
