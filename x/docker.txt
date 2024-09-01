@@ -1,0 +1,343 @@
+FROM isletimsistemi_adi
+LABEL key value
+MAINTAINER yusuf
+RUN,CMD
+EXPOSE 80/UDP Port açmak için
+ENV
+ADD kaynakyolunubelirt /bin/xyz
+(internetteki bir link olabilir veya lokal dosyayı çekerken kullanılıyor)
+COPY lokaldaki gibi düşünülebilir
+ENRTYPOINT 
+VOLUME => datanın silinmesini istemiyorsak 
+USER containerda yetkili kullanıcı kim olmalıdır?
+WORKDIR /www/html/ başlangıçta nereden başlayacak?
+MKDIR 
+
+docker container linux veya windows işletim sistmlerinin çekirdeklerinde izole bir şekilde bulunan processlere denir. 
+
+Sanal makinelerin docker üzerindeki karşılıklarına container denir. 
+
+Kapsayıcılar ana işletim sisteminin çekirdeğini kullanıyor . Daha basitleştirilmiş. İzole çalışmış oluyor. Containerlerde yazılımı paketleme ve dağıtımı daha basit. İstediğin ortamda çalışabiliyor. Scalelibility hızlı başlama, daha hızlı.
+
+Namespaceler containerlerin erişebileceği alanları kısıtlar. Sadece kendi üzerinde çalışmış olduğu servisleri görmesini sağlar. Namespace alanı işletim sisteminin üzerindeki çalışan servislere olan erişimini kısıtlıyor. Control grouplar ne kadar kaynak tüketilcek.
+
+
+docker client docker host üzerinde çalışır. Kullanıcıların dockear daemon ile iletişim kurmalarını sağlar. Doscer host ise docker enginein üzerinde koştuğu sunucudur. Docker register image dosyaları templatelerin tamamnı burada bulunur. Docker daemon istekleri dinler (rest api). ana sunucu üzerindeki tüm istekleri dinler.registry kısmı ise docker içerisinde çalıştırılacak olan image dosyaları burada tutulmaktadır.
+
+docker ps bütün containerlarin listesi
+
+docker ps -a pause olan container çıktıları gözükür 
+
+docker run centos:7 echo "hello world" tek seferlik çalıştı ve kendisini exit kısmına gönderdi
+
+docker run centos:7 ps -ef
+
+ps kullanılırsa çalışmadığı için gözükmez
+
+docker container ls veya ls -a da kullanılabilir. 
+
+docker container run -it centos:7 bash interaktif tti connection yazılabilir. Böylelikle centostaki büütn komutlar kullanılabilir.
+
+her run komutu çalıştırıldığında yeni bir container oluşturulur dolayısıyla biten bir containera bağlanmak istenirse 
+
+docker ps -a ile hangisi olduğu bulunur ve startla başlatılması gerekir
+
+docker container start containerid ile olur
+
+docker container  exec containerid ps -ef çıktısı
+ 
+
+docker container exec -it containerid bash komutu kullanılırsa da normal bash komutları çalıştırılabilir.
+
+
+docker container ls -a --no-trunc 
+
+detaylı olarak containerlar gözükür. tam container id ihyiacı olaabilir.
+
+conker container ls -a 
+
+kısa gözükür
+
+
+docker container ls -a -q sadece container kısa idleri gözükür
+
+
+docker conrainer ls -l 
+son container bilgisine ulaşılır
+
+
+docker container ls -a --filter "" image status bilgisi vesaire yazılabilir. Boş bırakıldığı zaman bütün containerlar gözükür. 
+
+normal runtimeda -d de çalışırsa arka planda çalışır deattach da çalışırsa stop edene kadar devam eder
+
+
+docker conatainer run centos:7 ping 127.0.0.1 -c 10 10 kez ping atıldı docker ps yapılırsa çalışmıyor ouyor
+
+
+docker container run -d centos:7
+ping 127.0.0.1
+
+docker os hala çalışıyor h
+
+docker container logs container id yazılırsa arka planda çalışan ping komutunu görebiliriz.
+
+docker container attach containerid canlı olarak ping atılması görülebilir ancak burada ctrl+c kullanılırsa conteiner kendini exit moduna düşürür. 
+
+docker container logs --tail 5 denirse son 5 log gözükmektedir. 
+
+docker container logs -f containerid denilince canlı süre. yine izlenebilir. 
+
+
+
+docker container run -d tomcat tomcat sunucusu hazır hale getiriliyor. 
+
+docker container stop containerid yazılıdğında stop ediliyor 
+
+
+docker container start -a containerid attach olmak isyiroum ve anında bağlanmak istiyorum yani 
+
+
+docker container start containerid 
+
+docker container logs -f bütün detaylar görülebiliyor container 
+hala devam ediyor olmaktadır. 
+
+
+docker container kill container id yazılabilir stop ve kill arasındaki fark stop sırasıyla durdurup kill 10 sn içerisinde shutdown ediyor 
+
+
+docker container start continerid 
+
+docker container inspect containerid yaptığında her şeye okuyabiliyorsun 
+
+
+docker conatainer run -d nginx contianer oluşturalım
+
+docker container run -d -p 5000:80 80/tcp nginx  yazsak sadece host port açmış oluruz 5000:80 5000 host 80 container port açmış oluruz. 
+
+docker ps komutu ile ilgili containerin 5000-> 80 portunda yayın açtığını görüyorum. 
+
+
+docker container port containerid yazarak hangi portun açık olduğunu görebiliyoruz. 
+
+DOCKERFİLE
+FROM nginx 
+EXPORT 80 direkt image halinede getiliebilyor
+docker image build -t mynginx komutu ile de port açım işlemi gerçekleştirilebilir. 
+
+
+docker container run -d -P my_nginx bütün portların açılmasını sağlıyor.
+
+
+
+docker plugin konusu 
+
+
+docker plugin install pluginismi yazılır
+
+
+docker plugin ls yüklenmiş olan pluginlerin çıktısı görüntülenebilir.
+
+docker plugin disable 
+veya 
+docker plugin enable komutları kllanılabilir
+
+docker plugin inspect komutu ile de detaylar görüntülenebilir
+
+
+ilk olarak disable sonra rm edildiğinde silinir. 
+
+
+1. ÖRNEK
+
+vi DOCKERFILE
+
+FROM ubuntu 
+RUN apt-get -y update \ 
+apt-get install nano \
+apt-get install httpd 
+
+dosyayı kaydet
+
+docker image build -t BY-UBUNTU . bu dizindi by-ubuntu isminde image build yapılır. t tag verilme işlemidir. 
+
+docker image kullanılabilir.
+--name flagi isim vermek için kullanılır. 
+
+docker run --name -p 80:80 -d nginx  
+
+DOCKERFİLE kompleks örnek
+
+vi dockerfile 
+FROM ubuntu 
+MAİNTAINER by
+RUN apt-get -y update \
+RUN apt-get -y upgrade \
+RUN apt-get install nano
+RUN apt-get -y install python3 python3-pip
+
+COPY . /app
+WORKDIR /app
+EXPOSE 5000
+ENTRYPOINT echo "hello world"
+
+
+docker build -t ornek2 .
+
+docker container run ornek2 img da oluşturulabilir. 
+
+ docker multistage img boyutlarından luzumsuz fazlalıklardan arındırmak için kullanılıyor. Her bir satır imgdaki bir katmanı göstermektedir. büyük image dosyasını oluşturduktan sonra küçük için from dan as build kullanılması gerekiyor.  ve imagein üstüne --frombuild yazarak da yapabilirsiniz. 
+
+pull push
+
+docker tag imageid tagin ismini değiştirmek için kullanılır.
+
+docker pull nginx
+
+docker push 
+
+
+docker volume create --name test1 diyerek ilgili volumeu oluşturabiliriz. 
+
+
+eğer volume atamasını yaptıktan sonra pathi belirtirken:ro yaparsak olur. herhangi bir dosya oluşturamayız dolayısıyla.
+
+docker network create test1network 
+
+docker network ls komutu ile bakılabilir
+
+bir networku containera assign etmek için subnet olarak da belirlenebilir. 
+
+docker container run -it --net test1network centos bash 
+
+docker network create --subnet 192.168.100.0/24 --gateway 192.168.100.1 test2network
+
+docker container run --net test2network -it centos bash komutunu kullanarak da ilgili containeri netoworke bağlamış oluyoruz
+
+
+docker netowrk create --subnet 192.168.200.0/24 --gateway 192.168.200.1 --driver null test3network
+ null ağı tanımlayabiliriz.
+
+
+docker network create --driver host test3network istenildiği kadar bridge ağı oluşturulabilir 
+
+docker container run --name n -it -d centos  
+
+docker container run --name network-1 -it -d centos 
+
+docker network rm test1network şeklinde silinebilir herhangi bir şekilde kullanılmaması gerekmemektedir. 
+
+temeldeki fiziksel ağa doğrudan bağlantı kurulması isteniyorsa mac vlan ağına bağlanılması gerekmektedir. fiziksel ağ üzerinde kullanılmak isteniyorsa
+bunu oluşturmak için ise 
+
+
+docker network create -d macvlan --subnet=192.168.0.0/24 --gateway=192.168.0.1 -o parent=eth0 macvlan-mynet şeklinde oluşturulabilmektedir.
+
+tek bir yml dosyası ile çok contianerlari sistemleri hızlı bir biçimde publish etmek için kullanılıyor. docker compose run yml dosyasında almadığım aksiyonları almammı sağlamaktadır. 
+
+vi docker-compose.yml
+
+mutlaka mutlaka version ile başlaması gerekiyor
+
+version "2.6"
+services: (hangi cont, hangi servis) nginx-service:
+        build : Website
+        depend_on : ruby_service (bağlantılı olduğu bir container olacak)
+ruby_service :
+build : ./WebApp
+depends_on : 
+redis_service
+redis_service:
+image:redis 
+örnek yml dosyası
+
+mkdir Website için WebApp için oluşturup bunlar için dockerfile oluşturulması gerkeiyor
+
+from nginx
+
+webappe gir ona da dockerfile oluştur
+
+from ruby-service
+
+openssl rand -base64 32 > db_password.txt rasgele şifre oluşturmak için kullanılabilir
+
+scale oluştururken ya docker-compose up -d --scale mysql=6 demen gerke ama ports:
+80-82:80 şeklinde söylemen lazım ama bunu da yml dosyası üzerinden yapabiliyorsun
+deploy:
+replicas : 3 diye de diyebiliyoruz. 
+sonra docker-compose up -d diyerek de yapabilirsin.
+
+raft algoritması n-1/2 kuralı uygulanıyorsa 3 tane varsa 1 tanesini tolare edilebilir demektir. 
+
+docker swarm init  --advertise-addr ip
+
+hangisi manager olan hangisi seçilmelidir
+
+2377 portunda haberleşmesi gerekiyor manager ile workerlar 
+
+docker swarm ca sertifika görüntüleme için 
+
+docker swarm join-token worker veya manager diyerek ekleyebiliyoruz  diyerek 
+ekleyebiliyoruz. 
+        
+docker swarm update ile clusterlar update edilebiliyor. 
+
+
+docker node ls ortamdaki bütün nodeların versiyonlarıyla beraber görüntülenebiliyor. 
+
+
+docker node promote node2 diyerek manager rolune atanabiliyor. 
+
+-------overlay network nedir----
+docker network ls bir tane overlay aktif olur
+
+docker network inspect ingress diyerek ortamdaki worker ve managerlarin iplerine vesaire ulaşabiliyor. 
+
+overlay conta arasında iletişimi  sağlayan ad 
+
+pkid - overlay network swarm net aktif olunca her nodea ekleniyor tünelleme mantığı her node ip adresi üzerinden haberleşiyor. ekstra herhangi bir fiziksel kuruluma gerek kalmıyor. bütün trafik buradan. docker swarm varsa overlay net aktif edilmiş oluyor
+
+service ve tasklar
+swarm çalıştırıldığı zaman üzerinde çalışan her uygulama service olarak geçmektedir. buradaki containerlara service deniliyor. swarm task kaç kopya. 
+
+8 web 4 node 2 tanesine bölünüyor. 
+
+docker service create --name WebService --publish 8080:80 
+ --replica 4 (global)(globalde olabilir) nginx 
+
+docker service ls diyerek servislere bakılabilir. 
+
+docker service sclae WebService=8 8 farklı kopyayı oluşturulabilir. 
+
+docker service update --replicates 6 WebService 6 tane kopya oluşturdu.
+
+
+docker service create --name egitim1 --constraint "node.hostname==worker1" --replicas 4 nginx diyerek hangi host üzerinde çalışması istediğini yazabiliyorsun.
+
+docker service ps egitim1 diyerek nerede çalışmasını istediğini söyleyebilirsin 
+
+eğer node.hostname!==worker1 dersen hiçbir servis worker1 üzerinde çalışmıyor hepsini swarm otomatik dağıtıyor. 
+
+docker swarm visualizer ile hangi servislerde hangileri çalışıyor gözükebiliyor.
+
+kendi dokumanından bakılabilir. 
+
+container management cli üzerindende değilde web arayüzü üzerinden yapılabiliyor portainer toolu sayesinde tek bir interface üzerinden yapılabiliyor. 
+
+docker compose gibi stack belirli mikroservislerin tek bir yml dosyası üzerinden ayağa kaldırılmasını ifade etmektedir.
+
+ docker secret create şeklinde şifre oluşturuluyor.
+
+şifreler ve dosyalar oluşturulduktan sonra docker network create -d overlay wp diyerek network create ediyoruz daha sonra swarm üzerinde bir service oluşturuyoruz. 
+
+docker service create \ 
+--name mariadb \ 
+--replicas 1 \
+--constraints= node.role==manager \ 
+--netowork wp \
+--secret source= root_db_password, target=root_db_password
+
+wordpress servisi için tanımladığımızdan dolayı aynısı ismi wp oluyor node.role == worker1 oluyor --publish ise 8080:80 üzerinden -e WORDPRESS_DB_HOST = mariadb diyebiliyoruz 
+
+
+
